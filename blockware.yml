@@ -20,7 +20,7 @@ spec:
       PGDATA: /var/lib/postgresql/data/pgdata
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    authentication:
+    credentials:
       username: postgres
       password: postgres
 
