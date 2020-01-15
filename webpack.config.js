@@ -32,7 +32,7 @@ module.exports = {
             {
                 test: /\.less$/,
                 loaders: ["style-loader", "css-loader", "less-loader"],
-                include: Path.resolve(__dirname, "./src")
+                include: Path.resolve(__dirname, "./")
             },
             {
                 test: /\.ya?ml$/,
@@ -53,6 +53,7 @@ module.exports = {
     },
     externals: {
         react: 'React',
+        lodash: '_',
         '@blockware/ui-web-components': 'Blockware.Components',
         '@blockware/ui-web-types': 'Blockware.Types'
     }
