@@ -1,4 +1,4 @@
-import React,{ChangeEvent, Component} from "react";
+import React,{Component} from "react";
 import _ from "lodash";
 
 import {SingleLineInput} from "@blockware/ui-web-components";
@@ -7,6 +7,7 @@ import {
     ResourceMetadata,
     ResourceConfigProps,
 } from "@blockware/ui-web-types";
+import {observer} from "mobx-react";
 
 function validateDatabaseName(fieldName:string, name:string) {
     if (!/^[a-z]([a-z0-9_-]*[a-z0-9_])?$/i.test(name)) {
@@ -14,6 +15,7 @@ function validateDatabaseName(fieldName:string, name:string) {
     }
 }
 
+@observer
 class PostgreSQLEditorComponent extends Component<ResourceConfigProps<ResourceMetadata>> {
 
 
