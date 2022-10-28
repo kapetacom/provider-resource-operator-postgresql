@@ -4,7 +4,6 @@ metadata:
   name: PostgreSQL 9.6
   description: Use PostgreSQL 9.6 in your plans
 spec:
-
   local:
     image: postgres:9.6
     health:
