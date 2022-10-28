@@ -1,6 +1,6 @@
 {
     "name": "@blockware/provider-resource-operator-postgresql",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "main": "index.js",
     "description": "Provides resource type for PostgreSQL",
     "keywords": [
