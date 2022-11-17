@@ -3,7 +3,7 @@ const Path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        'sqldb.blockware.com/v1/PostgreSQL': Path.resolve(__dirname, "./src/web")
+        'blockware/resource-type-postgresql': Path.resolve(__dirname, "./src/web")
     },
     output: {
         path: Path.join(process.cwd(), 'web'),

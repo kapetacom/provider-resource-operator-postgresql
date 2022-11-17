@@ -7,7 +7,7 @@ import {
 import '@blockware/ui-web-components/styles/index.less';
 import PostgreSQLEditorComponent from "../src/web/PostgreSQLEditorComponent";
 
-const RESOURCE_KIND = 'sqldb.blockware.com/v1/PostgreSQL';
+const RESOURCE_KIND = 'blockware/resource-type-postgresql';
 
 const block:BlockWrapper<any> = {
   addEntity: entity => {
