@@ -1,13 +1,13 @@
 import React,{Component} from "react";
 import _ from "lodash";
 
-import {SingleLineInput} from "@blockware/ui-web-components";
 
 import {
     ResourceMetadata,
     ResourceConfigProps,
 } from "@blockware/ui-web-types";
 import {observer} from "mobx-react";
+import {FormInput} from "@blockware/ui-web-components";
 
 function validateDatabaseName(fieldName:string, name:string) {
     if (!/^[a-z]([a-z0-9_-]*[a-z0-9_])?$/i.test(name)) {
@@ -28,7 +28,7 @@ class PostgreSQLEditorComponent extends Component<ResourceConfigProps<ResourceMe
     render() {
 
         return (
-            <SingleLineInput
+            <FormInput
                 name={"name"}
                 value={this.props.metadata.name}
                 label={"Name"}
