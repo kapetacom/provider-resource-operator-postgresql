@@ -5,9 +5,9 @@ import _ from "lodash";
 import {
     ResourceMetadata,
     ResourceConfigProps,
-} from "@blockware/ui-web-types";
+} from "@kapeta/ui-web-types";
 import {observer} from "mobx-react";
-import {FormInput} from "@blockware/ui-web-components";
+import {FormInput} from "@kapeta/ui-web-components";
 
 function validateDatabaseName(fieldName:string, name:string) {
     if (!/^[a-z]([a-z0-9_-]*[a-z0-9_])?$/i.test(name)) {

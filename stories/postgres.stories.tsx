@@ -2,12 +2,12 @@ import React from 'react';
 import {
   ResourceKind,
   BlockWrapper
-} from '@blockware/ui-web-types';
+} from '@kapeta/ui-web-types';
 
-import '@blockware/ui-web-components/styles/index.less';
+import '@kapeta/ui-web-components/styles/index.less';
 import PostgreSQLEditorComponent from "../src/web/PostgreSQLEditorComponent";
 
-const RESOURCE_KIND = 'blockware/resource-type-postgresql';
+const RESOURCE_KIND = 'kapeta/resource-type-postgresql';
 
 const block:BlockWrapper<any> = {
   addEntity: entity => {

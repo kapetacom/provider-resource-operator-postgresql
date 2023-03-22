@@ -1,7 +1,7 @@
 # PostgreSQL Resource Provider
-Provides PostgreSQL database resources to the blockware eco-system.
+Provides PostgreSQL database resources to the kapeta eco-system.
 
 ---
-For details about Blockware Providers see:
+For details about Kapeta Providers see:
 
 https://github.com/blockwarecom/provider-documentation

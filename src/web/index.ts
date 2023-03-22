@@ -5,9 +5,9 @@ import {
     ResourceMetadata,
     ResourceRole,
     ResourceType
-} from '@blockware/ui-web-types';
+} from '@kapeta/ui-web-types';
 
-const definition = require('../../blockware.yml');
+const definition = require('../../kapeta.yml');
 const packageJson = require('../../package.json');
 
 const config: ResourceConfig<ResourceMetadata> = {
