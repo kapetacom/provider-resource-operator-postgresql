@@ -1,22 +1,23 @@
 import PostgreSQLEditorComponent from './PostgreSQLEditorComponent';
 
 import {
-    ResourceConfig,
-    ResourceMetadata,
+    IResourceTypeProvider,
     ResourceRole,
-    ResourceType
+    ResourceProviderType
 } from '@kapeta/ui-web-types';
+import {Metadata} from "@kapeta/schemas";
 
 const definition = require('../../kapeta.yml');
 const packageJson = require('../../package.json');
 
-const config: ResourceConfig<ResourceMetadata> = {
+const resourceTypeProvider: IResourceTypeProvider<Metadata> = {
     kind: definition.metadata.name,
     version: packageJson.version,
     title: definition.metadata.title,
     role: ResourceRole.CONSUMES,
-    type: ResourceType.DATABASE,
-    componentType: PostgreSQLEditorComponent
+    type: ResourceProviderType.OPERATOR,
+    componentType: PostgreSQLEditorComponent,
+    definition
 };
 
-export default config;
+export default resourceTypeProvider;
