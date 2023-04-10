@@ -4,6 +4,8 @@ metadata:
   title: PostgreSQL
   description: Use PostgreSQL in your plans
 spec:
+  ports:
+    - type: postgres
   local:
     image: postgres:9.6
     health:
