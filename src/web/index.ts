@@ -16,7 +16,7 @@ const resourceTypeProvider: IResourceTypeProvider<Metadata> = {
     title: definition.metadata.title,
     role: ResourceRole.CONSUMES,
     type: ResourceProviderType.OPERATOR,
-    componentType: PostgreSQLEditorComponent,
+    editorComponent: PostgreSQLEditorComponent,
     definition
 };
 
