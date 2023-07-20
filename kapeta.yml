@@ -4,6 +4,9 @@ metadata:
   title: PostgreSQL
   description: Use PostgreSQL in your plans
 spec:
+  icon:
+    type: url
+    value: https://storage.googleapis.com/kapeta-public-cdn/icons/postgresql.svg
   ports:
     - type: postgres
   local:
