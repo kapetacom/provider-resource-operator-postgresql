@@ -3,6 +3,7 @@ metadata:
   name: kapeta/resource-type-postgresql
   title: PostgreSQL
   description: Use PostgreSQL in your plans
+  visibility: public
 spec:
   icon:
     type: url
