@@ -11,7 +11,7 @@ spec:
   ports:
     - type: postgres
   local:
-    image: postgres:9.6
+    image: postgres:15.4
     health:
       cmd: psql --user postgres postgres -c 'select true' > /dev/null,
       interval: 5000
