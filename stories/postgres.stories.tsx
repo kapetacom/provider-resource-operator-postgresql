@@ -1,3 +1,8 @@
+/**
+ * Copyright 2023 Kapeta Inc.
+ * SPDX-License-Identifier: MIT
+ */
+
 import React from 'react';
 
 import '@kapeta/ui-web-components/styles/index.less';
