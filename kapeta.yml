@@ -28,4 +28,28 @@ spec:
     credentials:
       username: postgres
       password: postgres
+  versioning:
+    - paths:
+        - spec.models.*.name
+        - spec.models.*.type
+        - spec.models.*.*.type
+        - spec.models.*.*.ref
+        - spec.models.*.*.required
+        - spec.models.*.*.defaultValue
+      on:
+        - update
+        - delete
+      increment: major
+  schema:
+    type: object
+    required:
+      - models
+      - source
+    properties:
+      models:
+        type: array
+        items:
+          $ref: /core/entity
+      source:
+        $ref: /core/source-code
 

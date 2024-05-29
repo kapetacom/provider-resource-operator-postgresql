@@ -5,17 +5,20 @@
 
 import PostgreSQLEditorComponent from './PostgreSQLEditorComponent';
 
-import {
-    IResourceTypeProvider,
-    ResourceRole,
-    ResourceProviderType
-} from '@kapeta/ui-web-types';
+import {IResourceTypeProvider, ResourceRole, ResourceProviderType} from '@kapeta/ui-web-types';
 import {Metadata} from "@kapeta/schemas";
+import {DSLData} from "@kapeta/kaplang-core";
 
-const definition = require('../../kapeta.yml');
+const definition = require('../../kapeta.yml').default;
 const packageJson = require('../../package.json');
 
-const resourceTypeProvider: IResourceTypeProvider<Metadata> = {
+export interface PostgresSpec {
+    port: {
+        type: 'postgres';
+    };
+}
+
+const resourceTypeProvider: IResourceTypeProvider<Metadata, PostgresSpec, DSLData> = {
     kind: definition.metadata.name,
     version: packageJson.version,
     title: definition.metadata.title,

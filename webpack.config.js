@@ -27,11 +27,7 @@ module.exports = {
                 test: /\.(ts|tsx)$/,
                 loader: 'babel-loader',
                 options: {
-                    presets: [
-                        "@babel/env",
-                        "@babel/typescript",
-                        "@babel/react"
-                    ],
+                    presets: ["@babel/env", "@babel/typescript", "@babel/react"],
                     plugins: [
                         ["@babel/plugin-proposal-decorators", {legacy: true}],
                         ["@babel/plugin-proposal-private-methods", {"loose": true}],
@@ -48,27 +44,25 @@ module.exports = {
             },
             {
                 test: /\.ya?ml$/,
-                use: ['json-loader', 'yaml-loader'],
-                include: Path.resolve(__dirname, "./")
-            }
+                use: ['yaml-loader'],
+                include: Path.resolve(__dirname, './'),
+            },
         ]
     },
-    devtool: process.env.NODE_ENV === 'production' ?
-        'source-map' : 'inline-source-map',
+    devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'inline-source-map',
     resolve: {
-        extensions: [
-            '.js',
-            '.ts',
-            '.tsx',
-            '.less',
-            '.yml',
-            '.yaml'
-        ]
+        extensions: ['.js', '.ts', '.tsx', '.less', '.yml', '.yaml'],
+        fallback: {
+            path: require.resolve('path-browserify'),
+        },
     },
     externals: {
         react: 'React',
+        'react-dom': 'ReactDOM',
         lodash: '_',
         '@kapeta/ui-web-components': 'Kapeta.Components',
-        '@kapeta/ui-web-types': 'Kapeta.Types'
-    }
+        '@kapeta/ui-web-types': 'Kapeta.Types',
+        '@kapeta/ui-web-utils': 'Kapeta.Utils',
+        '@kapeta/ui-web-context': 'Kapeta.Context',
+    },
 };
