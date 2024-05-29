@@ -39,7 +39,7 @@
         "@babel/preset-env": "^7.23.3",
         "@babel/preset-react": "^7.23.3",
         "@babel/preset-typescript": "^7.23.3",
-        "@kapeta/kaplang-core": "^1.17.0",
+        "@kapeta/kaplang-core": "^1.17.1",
         "@kapeta/schemas": "^3.6.0",
         "@kapeta/ui-web-components": "^3.6.1",
         "@kapeta/ui-web-context": "^1.2.5",
