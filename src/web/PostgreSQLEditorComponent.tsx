@@ -74,7 +74,6 @@ const PostgreSQLEditorComponent = (props: ResourceTypeProviderEditorProps) => {
                     }}
                     onChange={(result: any) => {
                         modelsSource.valid();
-                        console.log("result", result.code, result.entities);
                         setResult(result.code, result.entities as DSLModel[]);
                     }}
                 />
