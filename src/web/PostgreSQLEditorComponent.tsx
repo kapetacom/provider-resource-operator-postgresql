@@ -38,7 +38,7 @@ const PostgreSQLEditorComponent = (props: ResourceTypeProviderEditorProps) => {
     };
 
     const source = modelsSource.get({type: KAPLANG_ID, version: KAPLANG_VERSION, value: ''});
-    const models = DSLConverters.fromSchemaEntity(modelsField.get({}));
+    const model = DSLConverters.fromSchemaEntity(modelsField.get({}));
 
     return (
         <Stack sx={{height: '100%'}}>
@@ -70,7 +70,7 @@ const PostgreSQLEditorComponent = (props: ResourceTypeProviderEditorProps) => {
                     }}
                     value={{
                         code: source.value,
-                        entities: models,
+                        entities: model ? [model] : [],
                     }}
                     onChange={(result: any) => {
                         modelsSource.valid();
