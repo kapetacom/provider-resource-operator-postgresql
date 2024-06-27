@@ -7,7 +7,14 @@ metadata:
 spec:
   icon:
     type: url
-    value: https://storage.googleapis.com/kapeta-public-cdn/icons/postgresql.svg
+    value: https://storage.googleapis.com/kapeta-public-cdn/icons/themed/postgres.svg
+  icons:
+    - type: url
+      value: https://storage.googleapis.com/kapeta-public-cdn/icons/themed/postgres.svg
+      theme: light
+    - type: url
+      value: https://storage.googleapis.com/kapeta-public-cdn/icons/themed/postgres-light.svg
+      theme: dark
   ports:
     - type: postgres
   local:
